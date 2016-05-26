@@ -1,0 +1,25 @@
+@color:#fff;
+@letra:Arial,sans-serif;
+@back:#adadad;
+.redondeo(@radio:5px){
+	-webkit-border-radius:@radio;
+	-moz-border-radius:@radio;
+	-o-border-radius:@radio;
+	-ms-border-radius:@radio;
+	border-radius:@radio;
+
+}
+
+
+body{
+	color:@color;
+	font-family: @letra;
+	background-color: @back;
+	div.round{
+		.redondeo(10px);
+	}
+	div.otro{
+		.redondeo;
+	}
+
+}

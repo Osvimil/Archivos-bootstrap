@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap-responsive.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="container">
+
+	<div class="row-fluid">
+		<div class="span12">
+		&nbsp;
+		</div>
+	</div>
+
+	<div class="row-fluid">
+		<div class="span12">
+			<div class="page-header">
+				<h1>POPOVER AVEC JS</h1>
+			</div>
+
+			
+			<a href="" class="btn mypop">CON JAVASCRIPT</a>
+		</div>
+	</div>
+	
+</div>
+
+
+
+
+
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<!--<script src="http://code.jquery.com/jquery-migrate-1.1.0.js"></script>-->
+<script src="js/bootstrap.min.js"></script>	
+<script>
+	$().ready(function(){
+		$(".mypop").popover({
+			placement: "bottom",
+			title: "NAVIDAD",
+			content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit en el siguiente link <a href='http://www.wikipedia.com' class='btn'>wikipedia</a>. Vitae fugiat facilis enim veritatis repudiandae, voluptatum unde officiis, molestias quae fugit modi architecto dolore, eveniet. Dicta dignissimos vero illo quasi in.",
+			html: true
+		});
+	});
+	setTimeout(function(){
+		$(".mypop").popover("show");
+	},2000);
+	setTimeout(function(){
+		$(".mypop").popover("hide");
+	},4000);
+	setTimeout(function(){
+		$(".mypop").popover("toggle");
+	},6000);
+	setTimeout(function(){
+		$(".mypop").popover("destroy");
+
+	},8000);
+	$(".mypop").on("show",function(){
+		console.log("MOSTRANDO");
+	});
+	$(".mypop").on("hide",function(){
+		console.log("OCULTANDO");
+	});
+</script>
+</body>
+</html>

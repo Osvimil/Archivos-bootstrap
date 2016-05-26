@@ -1,0 +1,36 @@
+@import "functions.less";
+
+body{
+
+	color:@color;
+	font-family: @letra;
+	background-color: @back;
+
+	div.round{
+		.redondeo(10px);
+	}
+	div.otro{
+		.redondeo;
+	}
+	body > section{
+		padding:5em 0;
+	}
+
+	
+	header{
+		background-color: blue;
+		h1{
+			font-size:6px;
+
+		}
+	}
+
+	footer{
+		a{
+			&:hover{
+				color:#555;
+			}
+			color:black;
+		}
+	}
+}
